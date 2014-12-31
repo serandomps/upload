@@ -67,8 +67,8 @@
                     // so we set the name along with the iframe HTML markup:
                     counter += 1;
                     iframe = $(
-                            '<iframe src="' + initialIframeSrc +
-                            '" name="iframe-transport-' + counter + '"></iframe>'
+                        '<iframe src="' + initialIframeSrc +
+                        '" name="iframe-transport-' + counter + '"></iframe>'
                     ).bind('load', function () {
                             var fileInputClones,
                                 paramNames = $.isArray(options.paramName) ?
@@ -131,7 +131,7 @@
                                     options.fileInput.each(function (index) {
                                         $(this).prop(
                                             'name',
-                                                paramNames[index] || options.paramName
+                                            paramNames[index] || options.paramName
                                         );
                                     });
                                 }
@@ -203,7 +203,7 @@
                 var xmlDoc = iframe && iframe[0];
                 return xmlDoc && $.isXMLDoc(xmlDoc) ? xmlDoc :
                     $.parseXML((xmlDoc.XMLDocument && xmlDoc.XMLDocument.xml) ||
-                        $(xmlDoc.body).html());
+                    $(xmlDoc.body).html());
             },
             'iframe script': function (iframe) {
                 return iframe && $.globalEval($(iframe[0].body).text());
